@@ -1,0 +1,24 @@
+body{
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+}
+
+
+ul{
+    list-style: none;
+}
+
+
+.nav-list{
+    display: flex;
+}
+
+.name-of-site{
+    justify-content: flex-start;
+}
+
+.nav-list-item{
+    justify-content: flex-end;
+    padding-left: 0px;
+}
