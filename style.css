@@ -1,26 +1,46 @@
-body{
-    padding: 0px;
-    border: 0px;
-    margin: 0px;
+:root{
+    --default-text-color: white;
 }
 
-ul{
+body{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    color: var(--default-text-color);
+}
+
+.fwh-slide{
+    height: 100vh; /* vh = viewport height */
+    background-color: rgb(14, 16, 17);
+    box-sizing: border-box;
+}
+
+.top-nav-list{
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
 
-
-.nav-list{
-    display: inline;
-    padding: 0px;
-}
-
-.name-of-site{
-    display: flex;
-    float: left;
-}
-
-.nav-list-item{
-    padding-left: 25px;
+.top-nav-list-item{
+    color: var(--default-text-color);
+    font-size: 25px;
+    font-family: Lato;
+    padding-left: 5px;
+    padding-right: 5px;
     display: flex;
     float: right;
+    text-decoration: none;
+}
+
+#name-of-site{
+    float: left;
+    padding-left: 10px;
+}
+
+#intro{
+    font-size: 50px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
