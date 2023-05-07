@@ -4,21 +4,23 @@ body{
     margin: 0px;
 }
 
-
 ul{
     list-style: none;
 }
 
 
 .nav-list{
-    display: flex;
+    display: inline;
+    padding: 0px;
 }
 
 .name-of-site{
-    justify-content: flex-start;
+    display: flex;
+    float: left;
 }
 
 .nav-list-item{
-    justify-content: flex-end;
-    padding-left: 0px;
+    padding-left: 25px;
+    display: flex;
+    float: right;
 }
