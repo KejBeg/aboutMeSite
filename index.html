@@ -10,19 +10,61 @@
     <title>Triot</title>
 </head>
 <body>
-    <section class="fwh-slide" id="section-intro">
+    <section class="section">
         <nav class="top-nav">
             <ul class="top-nav-list">
-                <a href="" class="top-nav-list-item" id="name-of-site">Triot</a>
-                <a href="" class="top-nav-list-item"><li><div>About me</div></li></a>
-                <a href="" class="top-nav-list-item"><li><div>Skills</div></li></a>
-                <a href="" class="top-nav-list-item"><li><div>Projects</div></li></a>
+                <a href="" class="top-nav-list-item" id="name-of-site">Triot</a>  
                 <a href="" class="top-nav-list-item"><li><div>Contacts</div></li></a>
+                <a href="#section-projects" class="top-nav-list-item"><li><div>Projects</div></li></a>
+                <a href="#section-about-me" class="top-nav-list-item"><li><div>About me</div></li></a>
             </ul>
         </nav>
 
         <div id="intro">Hello, I'm KejBeg</div>
     </section>
-    
+    <section class="section" id="section-about-me">
+        <header class="section-header" id="about-me-header">About Me</header>
+        <div id="about-me-text">
+            <img id="pfp-image" src="images/pfpUpscaled.png" alt="Logo">
+            <p id="about-me-text-paragraph">
+                I'm  a 16 year old high school student studying at SPŠE Havířov.
+                Interested in coding, 3D printing and gaming.
+            </p>
+        </div>
+        <header class="section-header" id="my-skills-header">My Skills</header>
+        <ul id="my-skills-list">
+            <li class="my-skills-list-item">C</li>
+            <li class="my-skills-list-item">C++</li>
+            <li class="my-skills-list-item">Java</li>
+            <li class="my-skills-list-item">Javascript</li>
+            <li class="my-skills-list-item">HTML</li>
+            <li class="my-skills-list-item">CSS</li>
+            <li class="my-skills-list-item">Blender</li>
+            <li class="my-skills-list-item">Adobe Photoshop</li>
+            <li class="my-skills-list-item">Adobe Illustrator</li>
+            <li class="my-skills-list-item">Sony Vegas</li>
+
+        </ul>
+    </section>
+    <section class="section" id="section-projects">
+        <header class="section-header">Projects</header>
+        <ul class="projects-list">
+            <li class="project-list-item">
+                <header class="projects-header">Triot site</header>
+                <p class="project-description">An about me site</p>
+                <a href="https://github.com/KejBeg/aboutMeSite" class="project-icon-anchor">
+                    <img src="images/github-mark-white.png" alt="github logo" class="projects-icon">
+                </a>
+            </li>
+            <li class="project-list-item">
+                <header class="projects-header">Medieval game</header>
+                <p class="project-description">A text based game in Java.</p>
+                <a href="https://github.com/KejBeg/Medieval" class="project-icon-anchor">
+                    <img src="images/github-mark-white.png" alt="github logo" class="projects-icon">
+                </a>
+            </li>
+
+        </ul>
+    </section>
 </body>
 </html>
