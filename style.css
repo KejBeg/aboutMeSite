@@ -3,7 +3,10 @@
 }
 
 html{
-    scroll-behavior:smooth
+    scroll-behavior: smooth;
+    padding: 0;
+    border: 0;
+    margin: 0;
 }
 
 body{
@@ -11,10 +14,12 @@ body{
     border: 0;
     margin: 0;
     font-family: Lato;
+    
     color: var(--default-text-color);
 }
 
 .section{
+    overflow: hidden;
     min-height: 100vh; /* vh = viewport height */
     box-sizing: border-box;
     background: rgb(14, 16, 17);
@@ -42,14 +47,27 @@ body{
     padding-left: 10px;
 }
 
-#intro{
+#intro-text{
+    display: flex;
     font-size: 50px;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
 
+
+#top-nav-line{
+    display: block;
+    width: 100vw;
+}
+
+
+
+.contact-list-icon{
+    width: 50px;
 }
 
 #about-me-text{
@@ -92,7 +110,7 @@ body{
 
 .projects-header{
     color: var(--default-text-color);
-    padding-top: 10px;
+    padding-top: 0;
     font-size: 36px;
     width: 100%;
     display: flex;
@@ -101,6 +119,7 @@ body{
 }
 
 .project-description{
+    margin: 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -114,22 +133,45 @@ body{
     margin: auto
 }
 
-.projects-list{
+#projects-list{
     padding: 0;
-    display: block;
+    display: flexbox;
+    width: 100%;
     list-style-type: none;
-    height: 100vh;
+}
+
+.projects-list-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+    height: 45vh;
+}
+
+.project-description{
+    display: flex;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
 }
 
 .project-list-item{
-    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    flex-grow: 1;
+
 }
 
 .projects-icon{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
+}
+
+.contact-list{
+    width: 100%;
+    height: 100%;
+}
+
+.contact-list-icon{
+    width: 50px;
 }
