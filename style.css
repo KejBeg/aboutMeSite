@@ -1,12 +1,16 @@
 :root {
 	--nav-height: 50px;
 	--footer-height: 50px;
-	--nav-bottom-border: 1px;
+	--nav-bottom-border: 2px;
 	--main-height-calculation-value: calc(100vh - var(--nav-height) - var(--footer-height) - var(--nav-bottom-border));
 }
 
 body {
-	background-color: black;
+	/* background-color: black; */
+	background-image: url('images/circle-3041437.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	color: white;
 	padding: 0;
 	margin: 0;
@@ -39,8 +43,15 @@ nav {
 			padding: 5px;
 
 			& a {
+				padding: 5px;
+				border: 1px solid white;
+				border-radius: 10px;
 				text-decoration: none;
 				color: white;
+				transition: font-size 0.25s;
+			}
+			& a:hover {
+				font-size: large;
 			}
 		}
 	}
@@ -68,21 +79,24 @@ main {
 		display: flex;
 		width: 100%;
 		height: 100%;
+		justify-content: center;
 
 		& ul {
 			display: flex;
-			width: 100%;
-			height: 100%;
+			width: fit-content;
+			height: fit-content;
 			list-style-type: none;
 			align-items: baseline;
 			justify-content: center;
 			margin: 0;
 			padding: 0;
+			border: 1px solid white;
+			border-radius: 20px;
 
 			& li {
 				align-items: center;
 				justify-content: center;
-				margin: 10px;
+				margin: 5px;
 			}
 		}
 	}
