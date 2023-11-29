@@ -38,7 +38,7 @@ async function greetingAddition() {
 }
 
 /**
- * Deletes letters from the greetingElement on home pagr
+ * Deletes letters from the greetingElement on home page
  */
 async function greetingDeletion() {
 	if (!greetingIsDone) return;

@@ -7,7 +7,7 @@
 
 body {
 	/* background-color: black; */
-	background-image: url('images/circle-3041437.jpg');
+	background-image: url('images/abstract_patterns_backgrounds_simple_1920x1080.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -18,21 +18,56 @@ body {
 	font-family: Roboto;
 }
 
+@keyframes navHeightAnimation {
+	0% {
+		height: 0;
+		width: 0;
+	}
+
+	100% {
+		height: var(--nav-height);
+		width: 100vw;
+	}
+}
+
+@keyframes navLogoAnimation {
+	0% {
+		width: 0;
+		height: 0;
+	}
+
+	100% {
+		width: 45px;
+		height: 45px;
+	}
+}
+
+@keyframes mainAnimation {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: 100vw;
+	}
+}
+
 nav {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	height: var(--nav-height);
 	border-bottom: var(--nav-bottom-border) solid white;
+	animation: navHeightAnimation 1s forwards;
 
 	& #logo {
+		padding-left: 35px;
 		& img {
-			width: 45px;
-			height: 45px;
+			animation: navLogoAnimation 1s forwards;
 		}
 	}
 
 	& #sites {
+		padding-right: 35px;
 		height: 100%;
 		width: 100%;
 		display: flex;
@@ -44,14 +79,26 @@ nav {
 
 			& a {
 				padding: 5px;
-				border: 1px solid white;
-				border-radius: 10px;
+				padding-bottom: 3px;
 				text-decoration: none;
-				color: white;
-				transition: font-size 0.25s;
+				color: inherit;
+				position: relative;
 			}
-			& a:hover {
-				font-size: large;
+
+			& a::after {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 3px;
+				background: white;
+				bottom: 0;
+				left: 0;
+				border-radius: 50px;
+				transition: width 0.3s;
+			}
+
+			& a:hover::after {
+				width: 100%;
 			}
 		}
 	}
@@ -62,6 +109,7 @@ main {
 	flex-direction: column;
 	width: 100vw;
 	height: var(--main-height-calculation-value);
+	animation: mainAnimation 1s forwards;
 
 	& #greeting-container {
 		display: flex;
