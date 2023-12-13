@@ -10,8 +10,15 @@ let greetings = [
 	'Привет, я', // Russian
 ];
 
+let aboutMeInfo = [
+	`Hello I'm Jakub Galuszka from the Czech Republic.`,
+	`I am currently Studying at Střední Průmyslová Škola Elektrotechnická Havířov.`,
+	`I'd like to work as a Developer in a FAANG company when i finish my learning journey.`,
+];
+
 const greetingLettersTime = 100; // Time till new letter comes up, in miliseconds
 const greetingWaitOnComplete = 1000; // Time of how long to do nothing, in miliseconds
+const writeAboutMeTime = 10; // How long till another letter can be added in the about me section
 
 let greetingElement = document.querySelector('#greeting'); // The element where the greeting belongs
 let newGreeting = greetings[0]; // The greeting that should be used
@@ -50,7 +57,35 @@ async function greetingDeletion() {
 	}
 }
 
-setInterval(greetingAddition, greetingLettersTime);
-setInterval(greetingDeletion, greetingLettersTime);
+/**
+ * Function that writes the about me texts on site load
+ */
+function createAboutMe() {
+	// Define element
+	const element = document.querySelector('#about-me-container');
 
-mim;
+	// Adds the element children, if not present already
+	if (element.children.length == 0) {
+		for (let i = 0; i < aboutMeInfo.length; i++) {
+			let newDiv = document.createElement('div');
+			element.appendChild(newDiv);
+		}
+	}
+
+	// Adds individual letters to the texts
+	for (let i = 0; i < element.children.length; i++) {
+		element.children[i].innerHTML = aboutMeInfo[i].slice(0, element.children[i].innerHTML.length + 1);
+	}
+}
+
+// Make it function only on the right site
+if (document.querySelector('#about-me-container') != undefined) {
+	setInterval(createAboutMe, writeAboutMeTime);
+}
+
+// Make it function only on the right site
+if (greetingElement != undefined) {
+	setInterval(greetingAddition, greetingLettersTime);
+	setInterval(greetingDeletion, greetingLettersTime);
+}
+
