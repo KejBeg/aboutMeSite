@@ -53,3 +53,4 @@ async function greetingDeletion() {
 setInterval(greetingAddition, greetingLettersTime);
 setInterval(greetingDeletion, greetingLettersTime);
 
+mim;
