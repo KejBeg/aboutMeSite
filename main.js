@@ -11,7 +11,7 @@ let greetings = [
 ];
 
 let aboutMeInfo = [
-	`Hello I'm Jakub Galuszka from the Czech Republic.`,
+	`Hello, I'm Jakub Galuszka from the Czech Republic.`,
 	`I am currently Studying at Střední Průmyslová Škola Elektrotechnická Havířov.`,
 	`I'd like to work as a Developer in a FAANG company when i finish my learning journey.`,
 ];
