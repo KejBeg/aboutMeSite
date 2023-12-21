@@ -6,8 +6,8 @@
 }
 
 body {
-	background-color: rgb(11, 82, 144);
-	background-image: url('images/abstractBackground.jpg');
+	background-color: rgb(6, 45, 78);
+	background-image: url('images/animatedShape.svg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
