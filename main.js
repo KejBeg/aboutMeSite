@@ -88,4 +88,3 @@ if (greetingElement != undefined) {
 	setInterval(greetingAddition, greetingLettersTime);
 	setInterval(greetingDeletion, greetingLettersTime);
 }
-
