@@ -6,7 +6,7 @@
 }
 
 body {
-	background-color: rgb(6, 45, 78);
+	background-color: #0e2a47;
 	background-image: url('images/animatedShape.svg');
 	background-size: cover;
 	background-position: center;
@@ -85,6 +85,11 @@ nav {
 				text-decoration: none;
 				color: inherit;
 				position: relative;
+
+				& img {
+					width: 20px;
+					height: 20px;
+				}
 			}
 
 			& a::after {
@@ -107,46 +112,87 @@ nav {
 }
 
 #index-main {
-	display: flex;
-	flex-direction: column;
 	width: 100vw;
 	height: var(--main-height-calculation-value);
 	animation: mainAnimation 1s forwards;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 
-	& #greeting-container {
-		display: flex;
+	& #left-side {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
 		width: 100%;
 		height: 100%;
-		flex-direction: row;
-		justify-content: center;
-		align-items: end;
 
-		font-size: xx-large;
-		font-family: roboto-bold;
+		& #greeting-container {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			align-items: flex-end;
+
+			font-size: xx-large;
+			font-family: roboto-bold;
+		}
+
+		& #interests-container {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			align-items: flex-start;
+
+			& ul {
+				display: flex;
+				width: fit-content;
+				height: fit-content;
+				list-style-type: none;
+				align-items: baseline;
+				justify-content: center;
+				margin: 0;
+				padding: 0;
+				border: 1px solid white;
+				border-radius: 20px;
+
+				& li {
+					align-items: center;
+					justify-content: center;
+					margin: 5px;
+				}
+			}
+		}
 	}
 
-	& #interests-container {
+	& #right-side {
 		display: flex;
 		width: 100%;
 		height: 100%;
 		justify-content: center;
+		align-items: center;
 
-		& ul {
+		& #contacts-container {
 			display: flex;
-			width: fit-content;
-			height: fit-content;
-			list-style-type: none;
-			align-items: baseline;
-			justify-content: center;
-			margin: 0;
-			padding: 0;
-			border: 1px solid white;
-			border-radius: 20px;
+			width: 100%;
+			height: 100%;
 
-			& li {
-				align-items: center;
+			& ul {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				height: 100%;
 				justify-content: center;
-				margin: 5px;
+				align-items: center;
+
+				list-style-type: none;
+
+				& li {
+					margin: 1%;
+
+					& img {
+						width: 20px;
+						height: 20px;
+					}
+				}
 			}
 		}
 	}
