@@ -111,9 +111,9 @@ nav {
 	}
 }
 
-@media (max-width: 768px) {
-	#left-side {
-		grid-template-rows: 1fr 1fr;
+@media (min-width: 768px) {
+	#index-main {
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
@@ -122,7 +122,6 @@ nav {
 	height: var(--main-height-calculation-value);
 	animation: mainAnimation 1s forwards;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
 
 	& #left-side {
 		display: grid;
