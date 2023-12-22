@@ -111,6 +111,12 @@ nav {
 	}
 }
 
+@media (max-width: 768px) {
+	#left-side {
+		grid-template-rows: 1fr 1fr;
+	}
+}
+
 #index-main {
 	width: 100vw;
 	height: var(--main-height-calculation-value);
@@ -180,6 +186,8 @@ nav {
 				flex-direction: column;
 				width: 100%;
 				height: 100%;
+				margin: 0;
+				padding: 0;
 				justify-content: center;
 				align-items: center;
 
