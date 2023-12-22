@@ -111,7 +111,7 @@ nav {
 	}
 }
 
-@media only screen and (hover: none) and (pointer: coarse) {
+@media (min-aspect-ratio: 4/3) {
 	#index-main {
 		grid-template-columns: 1fr 1fr;
 	}
