@@ -1,7 +1,7 @@
 let greetings = [
 	'Hello, I am', // English
-	'Dobrý den, Jsem', // Czech
-	'Dzień dobry, Jestem', // Polish
+	'Dobrý den, jsem', // Czech
+	'Dzień dobry, jestem', // Polish
 	'Hola, soy', // Spanish
 	'Bonjour, je suis', // French
 	'Ciao, sono', // Italian
@@ -88,3 +88,4 @@ if (greetingElement != undefined) {
 	setInterval(greetingAddition, greetingLettersTime);
 	setInterval(greetingDeletion, greetingLettersTime);
 }
+
